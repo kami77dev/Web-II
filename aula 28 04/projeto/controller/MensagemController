@@ -1,0 +1,20 @@
+package com.example.projeto.controller;
+import.org.springframework.stereotype.Restcontroller;
+import.org.springframework.stereotype.RequestMappig;
+import.org.springframework.stereotype.getMapping;
+import.org.springframework.stereotype.MensagemService;
+
+@Controller
+@RequestMappig("/api")
+public class MensagemController{
+    private final MensagemService mensagemService;
+
+    public MensagemController(MensagemService mensagemService){
+        this.mensagemService = mensagemService;
+    }
+
+    @getMapping("/mensagem")
+    public String obterMensagem(){
+        return mensagemService.obterMensagem();
+    }
+}
