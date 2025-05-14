@@ -42,7 +42,5 @@ public class Pessoa{
 
     public Integer getIdade() {
         return idade;
-    }  
-
-    
+    }
 }
