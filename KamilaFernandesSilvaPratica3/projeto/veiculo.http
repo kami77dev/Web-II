@@ -1,0 +1,34 @@
+# Definição de variáveis (ambiente “local” do REST Client)
+@base_url = https://vigilant-space-goldfish-x5xg6ggxx7g7c9p45-8080.app.github.dev
+
+### Inserir novo veiculo
+POST {{ base_url }}/api/veiculos
+Content-Type: application/json
+
+{
+  "modelo": "Sandero",
+  "ano": 2020,
+  "valor": 17000
+}
+
+### Listar todos os veiculos
+GET {{ base_url }}/api/veiculos
+Accept: application/json
+
+### Buscar veiculoss por ID
+GET {{ base_url }}/api/veiculos/1
+Accept: application/json
+
+### Atualizar veiculo (PUT)
+PUT {{ base_url }}/api/veiculos/1
+Content-Type: application/json
+
+{
+  "nome": "Notebook",
+  "quantidade": 09,
+  "valor" : 5899.90 
+}
+
+### Remover veiculo (DELETE)
+DELETE {{ base_url }}/api/veiculos/1
+Accept: */*
